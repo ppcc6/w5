@@ -1,0 +1,25 @@
+<html>
+    <body>
+            <script type="text/javascript">
+                finder=function()
+                    {
+                        var a=document.getElementById('roll').value;
+                        if(a.length==0)
+                            {
+                                alert("ROLL is empty");
+                                return;
+                            }
+                        var b=a.toLowerCase();
+                        var str=b.search(/^[0-9][0-9][a-z][a-z][0-9][0-9]/);
+                        if(str==0)
+                            alert("ROLL is Valid");
+                        else
+                            alert("ROLL is Invalid");
+                    }
+            </script>
+        <form onsubmit=finder()>
+            Enter roll in Upper Case(DDAADD):<input id=roll type=text><br>
+            <input type=submit value=submit>
+        </form>
+    </body>
+ </html>
